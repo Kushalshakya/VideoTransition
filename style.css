@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+*{
+    margin : 0;
+    padding : 0;
+}
+.main{
+    background-color : #B7B4C3;
+    width : 100%;
+    height : 100vh;
+    color : #FDFCFD;
+    position : relative;
+}
+.topic{
+    display : flex;
+    width : 100%;
+    height : 15vh;
+    position : absolute;
+    top : 0;
+    justify-content : space-between;
+    align-items: center;
+}
+.topic .img{
+    width : 70px;
+    margin-left : 10%;
+}
+.topic ul{
+    display : flex;
+    list-style : none;
+    margin-right : 10%;
+}
+.topic ul li{
+    margin: 0px 20px;
+    font-weight : 400;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.cover{
+    position : absolute;
+    top : 45%;
+    left : 50%;
+    transform : translate(-50%);
+    /* justify-content: center;
+    align-items: center; */
+    font-family: 'Josefin Sans', sans-serif;
+}
+.cover .text h1{
+    font-size : 120px;
+    transition: 1s;
+}
+.cover .text h1:hover{
+    -webkit-text-stroke: 2px #fff;
+    color : transparent;
+}
+.cover .text button{
+    padding : 10px 25px;
+    margin-top : 4%;
+    /* border-radius : 20px; */
+    border  : 1px solid #fff;
+    background-color : transparent;
+    color : #fff;
+    margin-left : 40%;
+    transition: all .5s ease-in-out;
+    position : relative;
+}
+.cover .text button::before{
+    content : "";
+    position : absolute;
+    background-color : rgba(233, 222, 222, 0.479);
+    width : 100%;
+    height : 100%;
+    top : 0;
+    left : 0;
+    /* border-radius : 20px; */
+    z-index : -2;
+    transform : scaleX(0);
+    transform-origin : 0 0;
+    transition : .5s;
+}
+.cover .text button:hover:before{
+    transform : scaleX(1);
+    /* border-radius : 20px; */
+}
+ul li:hover{
+    cursor : pointer;
+}
+.cover .text button:hover{
+    /* background-color : rgba(233, 222, 222, 0.479); */
+    color : #000;
+    /* border : 1px solid rgba(233, 222, 222, 0.479); */
+    cursor : pointer;
+}
+.video{
+    position : absolute;
+    bottom: 0;
+    right : 0;
+}
+@media (min-aspect-ratio : 16/9){
+    .video{
+        width : 100%;
+        height : auto;
+    }
+}
+@media (max-aspect-ratio : 16/9){
+    .video{
+        width : auto;
+        height : 100%;
+    }
+}
+/* audio{
+    display : none;
+} */
